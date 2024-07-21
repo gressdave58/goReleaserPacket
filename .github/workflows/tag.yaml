@@ -35,7 +35,7 @@ jobs:
         if: ${{ steps.bump-semver.outputs.new_version != null }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: gressdave58/map-network-traffic
+          repository: gressdave58/goreleaserPcap
 
           event-type: publish-event
           client-payload: '{"new-tag": "${{ steps.bump-semver.outputs.new_version }}", "release-notes": "${{ steps.regex-match.outputs.group1 }}"}'
