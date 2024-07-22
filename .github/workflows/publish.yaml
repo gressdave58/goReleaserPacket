@@ -20,13 +20,14 @@ jobs:
         uses: actions/setup-go@v4
         id: go
         with:
-          go-version: 1.21
+          #go-version: 1.21
+          go-version: 1.19.4 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get dependencies
         run: |
-          #sudo apt-get install -yy --fix-missing libpcap-dev xz-utils p7zip-full binutils-mingw-w64 *-w64-x86-*
+          sudo apt-get install -yy --fix-missing libpcap-dev xz-utils p7zip-full binutils-mingw-w64 *-w64-x86-*
           sudo apt-get install libcap2-dev
           sudo apt-get install libpcap-dev
           sudo apt-get install gcc-multilib
