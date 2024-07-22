@@ -27,9 +27,8 @@ jobs:
       - name: Get dependencies
         run: |
           #sudo apt-get install -yy --fix-missing libpcap-dev xz-utils p7zip-full binutils-mingw-w64 *-w64-x86-*
-          #sudo apt-get install libcap2-dev
+          sudo apt-get install libcap2-dev
           sudo apt-get install libpcap-dev
-          sudo apt-get install libpcap-devel
           sudo apt-get install gcc-multilib
           sudo apt-get install build-essential
           sudo apt-get install gcc -y
