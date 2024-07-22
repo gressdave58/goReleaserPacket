@@ -29,15 +29,17 @@ jobs:
           #sudo apt-get install -yy --fix-missing libpcap-dev xz-utils p7zip-full binutils-mingw-w64 *-w64-x86-*
           #sudo apt-get install libcap2-dev
           sudo apt-get install libpcap-dev
-          sudo apt-get install gcc-multilib
+          #sudo apt-get install gcc-multilib
           #sudo find / -name libpcap.a
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v5
         with:
           version: latest
-          args: release --clean
+          args: release --clean --single-target 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CGO_ENABLED: 1
-
+          #CGO_ENABLED: 1
+          #goos: linux,windows,darwin
+          GOOS: linux,windows
+          GOARCH: 386,amd64
