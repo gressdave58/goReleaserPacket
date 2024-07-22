@@ -35,7 +35,7 @@ jobs:
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v5
         with:
-          version: latest
+          version: 2
           args: release --clean --config myGoRelease.cfg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
