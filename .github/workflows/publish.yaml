@@ -36,10 +36,10 @@ jobs:
         uses: goreleaser/goreleaser-action@v5
         with:
           version: latest
-          args: release --clean --single-target 
+          args: release --clean --config myGoRelease.cfg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #CGO_ENABLED: 1
           #goos: linux,windows,darwin
-          GOOS: linux,windows
-          GOARCH: 386,amd64
+          #GOOS: linux,windows
+          #GOARCH: 386,amd64
