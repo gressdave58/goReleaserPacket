@@ -24,6 +24,11 @@ jobs:
           #go-version: 1.19.4 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CGO_CFLAGS:'-O2 -g -Qunused-arguments'
+          CGO_CPPFLAGS:'-Qunused-arguments'
+          CGO_CXXFLAGS:'-O2 -g -Qunused-arguments'
+          CGO_FFLAGS:'-O2 -g -Qunused-arguments'
+          CGO_LDFLAGS:'-O2 -g -Qunused-arguments'
 
       - name: Get dependencies
         run: |
