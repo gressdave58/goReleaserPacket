@@ -27,7 +27,7 @@ jobs:
           CGO_CFLAGS: '-O2 -g -Qunused-arguments'
           CGO_CPPFLAGS: '-Qunused-arguments'
           CGO_CXXFLAGS: '-O2 -g -Qunused-arguments'
-          CGO_FFLAGS:' -O2 -g -Qunused-arguments'
+          CGO_FFLAGS: '-O2 -g -Qunused-arguments'
           CGO_LDFLAGS: '-O2 -g -Qunused-arguments'
 
       - name: Get dependencies
