@@ -11,7 +11,7 @@ import (
     "log"                   // Import the log package to log errors to the console.
     "time"
     "github.com/google/gopacket/pcap" // Import the pcap package to capture packets.
-    "github.com/google/gopacket/pcapgo"
+//    "github.com/google/gopacket/pcapgo"
     "github.com/google/gopacket" // Import the gopacket package to decode packets.
 
     "github.com/google/gopacket/layers" // Import the layers package to access the various network layers.
@@ -65,6 +65,7 @@ func main() {
 }
 
 
+/*
 func RunPacketCapture(DsourceHandle *pcap.Handle, outputFileName string, MaxPackets int, MaxTime int) {
         sourceHandle, err := pcap.OpenLive(device, snapshot_len, promiscuous, timeout)
         if err != nil {
@@ -97,5 +98,5 @@ func RunPacketCapture(DsourceHandle *pcap.Handle, outputFileName string, MaxPack
                 fmt.Println("Failed to write file header:", outputFileName, err)
                 return
         }
-
 }
+*/

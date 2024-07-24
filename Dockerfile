@@ -13,7 +13,7 @@ FROM debian:bookworm-slim
 
 WORKDIR /work
 
-COPY --from=0 /vacuum /usr/local/bin/goreleaserPcap
+COPY --from=0 /goreleaserPcap /usr/local/bin/goreleaserPcap
 
 COPY docker-entrypoint.sh /
 
