@@ -26,6 +26,7 @@ jobs:
         run: go mod tidy && git diff --exit-code
 
       - name: Dump GitHub context
+# Print the ENV .. debugging
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
@@ -38,9 +39,5 @@ jobs:
               dep ensure
           fi
           sudo apt-get install libpcap0.8-dev  
-# No tests yet 
-#      - name: Test
-#        run: go test ./...
       - name: Build
         run: make build 
-#        run: make build --always-make
