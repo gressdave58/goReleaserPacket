@@ -1,5 +1,5 @@
 build:
 	echo "Compiling for go"
-	@go build -o bin/goreleaserPcap
+	@go build -o bin/goReleaserPacket
 run:
-	@go run goreleaserPcap.go% 
+	@go run goReleaserPacket.go% 
