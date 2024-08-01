@@ -34,6 +34,7 @@ jobs:
         with:
           version: 1
           #args: release --clean  --config goRelease-linux.cfg
-          args: release --clean  --config goRelease-windows.cfg
+          #args: release --clean  --config goRelease-windows.cfg
+          args: release --clean  --config goRelease-darwin.cfg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
