@@ -31,7 +31,6 @@ jobs:
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v5
         with:
-          version: 2
           version: latest
           args: release --clean  --config goRelease.cfg
         env:
