@@ -39,3 +39,4 @@ jobs:
           args: release --clean  --config goRelease-darwin.cfg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOGCCFLAGS: '-Qunused-arguments -fPIC -m64 -pthread '
