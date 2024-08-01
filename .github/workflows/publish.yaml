@@ -27,6 +27,7 @@ jobs:
       - name: Get dependencies
         run: |
           sudo apt-get install libpcap-dev
+          sudo apt-get install gcc-multilib
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v5
