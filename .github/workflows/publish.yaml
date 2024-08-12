@@ -21,10 +21,6 @@ jobs:
         id: go
         with:
           go-version: 1.21
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GOGCCFLAGS: '-Qunused-arguments -fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build430979589=/tmp/go-build -gno-record-gcc-switches'
-          GO_ENV: ${{ go env  }}
 
       - name: Get dependencies
         run: |
